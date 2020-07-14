@@ -1,0 +1,109 @@
+.learn {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 15%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  text-align: center;
+}
+
+.learn h2 {
+  font-size: 1.2em;
+}
+
+.learn h3 {
+  border: none;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: white;
+}
+
+.learn p {
+  text-align: center;
+}
+
+.current-word {
+  font-size: 3em;
+  margin: 0.25em;
+  padding: 0;
+}
+
+.learn form {
+  text-align: center;
+  margin: 1em;
+}
+
+.learn input {
+  width: 50%;
+  height: 2em;
+  border-radius: 3px;
+  margin: 0.5em;
+}
+
+#submit-button {
+  font-weight: 600;
+  border-radius: 5px;
+  height: 2.5em;
+}
+
+#next-button {
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 3em;
+  border-radius: 5px;
+  font-weight: 600;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.learn form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback h2 {
+  font-size: 1.2em;
+}
+
+#correct {
+  padding: 1em;
+  background-color: #eee;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
+#incorrect {
+  padding: 1em;
+  margin: 0;
+  background-color: #eee;
+  border-bottom: 1px solid black;
+}
+
+@media only screen and (min-device-width : 768px) {
+  .learn {
+    width: 60%;
+  }
+
+  .learn input {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-device-width : 1024px) {
+  .learn {
+    width: 40%;
+    margin-top: 1%;
+  }
+}
+

@@ -1,0 +1,70 @@
+header {
+  display: flex 1 1 0;
+  width: 100%;
+  border-bottom: 4px ridge gray;
+  height: 100px;
+  background-color: #eee;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  font-size: 3em;
+  font-style: normal;
+  background-color: #eee;
+  font-family: axia-stencil, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header span {
+  font-size: 1em;
+  font-family: halyard-text, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  float: left;
+  margin-left: 5%;
+}
+
+header p {
+  font-size: .8em;
+}
+
+nav {
+  text-align: right;
+  font-weight: 600;
+  margin-right: 5%;
+}
+
+nav a {
+  margin-left: 1.2em;
+}
+
+
+@media only screen and (min-device-width : 768px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  header {
+    height: 130px;
+  }
+
+  header p {
+    font-family: arial;
+    font-weight: 800;
+    font-size: 24px;
+    border: 1px solid black;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

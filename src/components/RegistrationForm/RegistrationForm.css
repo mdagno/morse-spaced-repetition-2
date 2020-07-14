@@ -1,0 +1,48 @@
+.registration-form {
+  border: 3px ridge gray;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+#sign-up {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.registration-form label {
+  width: 100%;
+  display: inline-block;
+}
+
+.registration-form input {
+  width: 50%;
+  height: 3em;
+  margin: 1em;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.registration-form button {
+  width: 50%;
+  height: 3em;
+  font-weight: 800;
+  border-radius: 3px;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media only screen and (min-device-width : 768px) {
+  .registration-form {
+    width: 30%;
+    height: 500px;
+  }
+}
