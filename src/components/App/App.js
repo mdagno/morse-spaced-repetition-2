@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import Landing from '../Landing/Landing';
 import Header from '../Header/Header'
 import PrivateRoute from '../PrivateRoute/PrivateRoute'
 import PublicOnlyRoute from '../PublicOnlyRoute/PublicOnlyRoute'
@@ -23,7 +24,8 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <main>
+        <Landing />
+        {/* <main>
           {hasError && (
             <p>There was an error! Oh no!</p>
           )}
@@ -49,7 +51,7 @@ export default class App extends Component {
               component={NotFoundRoute}
             />
           </Switch>
-        </main>
+        </main> */}
       </div>
     );
   }

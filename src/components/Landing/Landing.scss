@@ -1,0 +1,32 @@
+.landing {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    height: 80vh;
+
+
+
+    &__main {
+        background-color: white;
+        background-image: linear-gradient(rgba(black, .65), rgba(black, .65)), url(../../assets/landing.jpeg);
+        background-size: cover;
+        display: grid;
+
+        justify-items: center;
+        align-items: center;
+
+        a,
+        a:visited,
+        a:active {
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+    }
+
+    &__secondary {
+        background-color: #ccc;
+        padding: 10px;
+        line-height: 20px;
+    }
+}
