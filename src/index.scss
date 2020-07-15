@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: nudista-web, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --font-size: calc(10px + 1vmin);
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  color: white;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}

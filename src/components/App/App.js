@@ -24,8 +24,7 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <Landing />
-        {/* <main>
+        <main>
           {hasError && (
             <p>There was an error! Oh no!</p>
           )}
@@ -40,6 +39,10 @@ export default class App extends Component {
               component={LearningRoute}
             />
             <PublicOnlyRoute
+              path={'/landing'}
+              component={Landing}
+            />
+            <PublicOnlyRoute
               path={'/register'}
               component={RegistrationRoute}
             />
@@ -51,7 +54,7 @@ export default class App extends Component {
               component={NotFoundRoute}
             />
           </Switch>
-        </main> */}
+        </main>
       </div>
     );
   }

@@ -1,8 +1,7 @@
 .landing {
     display: grid;
     grid-template-columns: 5fr 2fr;
-    height: 80vh;
-
+    height: 85vh;
 
 
     &__main {
@@ -26,7 +25,45 @@
 
     &__secondary {
         background-color: #ccc;
-        padding: 10px;
-        line-height: 20px;
+        padding: 2rem;
+
+        h3 {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
     }
+
+    a {
+        background-color: rgba(#000, .5);
+        padding: 2rem;
+        transition: all .2s;
+        font-size: 2rem;
+
+        @keyframes moveInBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(3rem);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+        animation: moveInBottom .3s ease-out .5s;
+        animation-fill-mode: backwards;
+
+    }
+    a:hover {
+        transform: translateY(-3px);
+        transition: all .5s;
+        box-shadow: 0 1rem 2rem rgba(#000,.2);
+    }
+
+    
 }

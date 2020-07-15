@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
-import './Header.css'
+import './Header.scss'
 
 class Header extends Component {
   static contextType = UserContext
@@ -52,10 +52,12 @@ class Header extends Component {
             spaced repetition
           </Link>
         </h1>
-          <span>{this.context.user.name ? this.context.user.name : null}</span>
+        <div className="header__login-options">
+        <span>{this.context.user.name ? this.context.user.name : null}</span>
             {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
+        </div>
       </header>
     );
   }

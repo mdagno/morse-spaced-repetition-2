@@ -137,7 +137,6 @@ export default class Learn extends React.Component {
         Your total score is: {this.context.totalScore}
         </p>
         </div>
-        <span className='cypress'>{this.state.nextWord}</span>
         <p className='current-word'>
           {nextWord
               .split('')

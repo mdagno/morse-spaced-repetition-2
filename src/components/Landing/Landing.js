@@ -9,8 +9,9 @@ function Landing() {
             <h2 className="heading-secondary">
                 Welcome to Spaced Repetition
             </h2>
-            <span><Link to='/login'>Login</Link></span>
-            <span><Link to='/register'>Sign Up</Link></span>
+            <span><Link to='/register'>Practice spaced repetition today!</Link></span>
+    
+           
             </div>
             <div className="landing__secondary">
                 <h3 className="heading-tertiary">What is spaced repetition?</h3>
