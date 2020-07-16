@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Input, Required, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
-import Button from '../Button/Button'
 import './RegistrationForm.scss'
 
 class RegistrationForm extends Component {
@@ -81,9 +80,9 @@ class RegistrationForm extends Component {
           />
         </div>
         <footer>
-          <Button type='submit'>
+          <button type='submit'>
             Sign up
-          </Button>
+          </button>
           {' '}
           <Link to='/login'>Already have an account?</Link>
         </footer>

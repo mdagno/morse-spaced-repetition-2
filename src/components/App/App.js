@@ -9,7 +9,6 @@ import LoginRoute from '../../routes/LoginRoute/LoginRoute'
 import DashboardRoute from '../../routes/DashboardRoute/DashboardRoute'
 import LearningRoute from '../../routes/LearningRoute/LearningRoute'
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute'
-import './App.css'
 
 export default class App extends Component {
   state = { hasError: false }
@@ -20,6 +19,7 @@ export default class App extends Component {
   }
 
   render() {
+    console.log(process.env.API_ENDPOINT)
     const { hasError } = this.state
     return (
       <div className='App'>
