@@ -19,7 +19,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(process.env.API_ENDPOINT)
     const { hasError } = this.state
     return (
       <div className='App'>

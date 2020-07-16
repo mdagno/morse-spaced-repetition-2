@@ -42,7 +42,7 @@ export default class Dashboard extends React.Component {
   renderLanguages = () => {
     if(this.state.languagesExpand === true) {
       return (
-        <>
+        <div>
         <ul className='languages expand'>
         <li className='language'>
         <h2 onClick={() => this.handleDropDown('detailsExpand')}>
@@ -52,7 +52,7 @@ export default class Dashboard extends React.Component {
          {this.renderLanguageDetails()}
         </li>
         </ul>
-        </>
+        </div>
       )
     }
     else {
