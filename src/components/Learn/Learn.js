@@ -1,5 +1,5 @@
 import React from 'react';
-import './Learn.css'
+import './Learn.scss'
 import UserContext from '../../contexts/UserContext';
 import ApiService from '../../services/api-service';
 
@@ -77,16 +77,16 @@ export default class Learn extends React.Component {
       if(this.context.isCorrect === true) {
         return (
           <div className='feedback'>
-            <h3>You were correct! :D</h3>
-            <p>The correct translation for {this.context.currentWord.nextWord} was {this.context.answer} and you chose {this.state.guess}!</p>
+            <h3>Correct!</h3>
+            <p>The correct translation was {this.context.answer} and you answered: {this.state.guess}</p>
           </div>
         )
         }
        else {
         return (
           <div className='feedback'>
-            <h3>Good try, but not quite right :(</h3>
-            <p>The correct translation for {this.context.currentWord.nextWord} was {this.context.answer} and you chose {this.state.guess}!</p>
+            <h3>Good try, but not quite right</h3>
+            <p>The correct translation was {this.context.answer} and you answered: {this.state.guess}</p>
           </div>
         )
       }
@@ -128,10 +128,12 @@ export default class Learn extends React.Component {
     const { totalScore, wordCorrectCount, wordIncorrectCount, nextWord, isCorrect, answer} = this.context;
       return (
         <>
-        <h2>Translate the word:</h2>
-        <div className="DisplayFeedback">
-        {this.renderFeedBack()}
+        <div className="scoreCounts">
+        <p>Correct: {this.state.correctScore}</p>
+        
+        <p>Incorrect: {this.state.correctScore}</p>
         </div>
+        <h2>Translate the word:</h2>
         <div className="DisplayScore">
         <p>
         Your total score is: {this.context.totalScore}
@@ -140,17 +142,18 @@ export default class Learn extends React.Component {
         <p className='current-word'>
           {nextWord
               .split('')
-              .map(char => char === '.' ?'\u25CF' : '\u268A')
+              .map(char => char === '.' ?'\u25CF' : '\u0082')
               .join('')}
         </p>
         <form onSubmit={this.handleSubmitAnswer}>
-        <label for='learn-guess-input'>What's the translation for this word?</label>
+        <label for='learn-guess-input'>Your answer:</label>
         <input type='text' id='learn-guess-input' onChange={e => this.handleGuessField(e.target.value)} required></input>
         {this.renderSubmitButton()}
         </form>
-        <p id='correct'>You have answered this word correctly {this.state.correctScore} times.</p>
-        <p id='incorrect'>You have answered this word incorrectly {this.state.incorrectScore} times.</p>
+        <div className="DisplayFeedback">
+        {this.renderFeedBack()}
         {this.renderNextButton()}
+        </div>
         </>
       )
   }

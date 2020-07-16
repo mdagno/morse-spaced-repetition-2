@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Input, Label } from '../Form/Form'
+import { Link } from 'react-router-dom'
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import Button from '../Button/Button'
-import './LoginForm.css';
+import './LoginForm.scss';
 
 class LoginForm extends Component {
   static defaultProps = {
@@ -77,6 +78,7 @@ class LoginForm extends Component {
         <Button type='submit'>
           Login
         </Button>
+        <Link to='/register'>Don't have an account?</Link>
       </form>
     )
   }

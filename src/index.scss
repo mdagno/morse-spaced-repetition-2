@@ -11,6 +11,8 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  background-image: linear-gradient(rgba(black, .65), rgba(black, .65)), url(./assets/landing.jpeg);
+  background-size: fit;
 }
 
 body {
@@ -36,3 +38,8 @@ body {
   padding: 0;
   margin: 0;
 }
+
+//variables
+
+//media queries
+

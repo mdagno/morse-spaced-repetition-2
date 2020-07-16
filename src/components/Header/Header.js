@@ -23,23 +23,24 @@ class Header extends Component {
 
   renderLogoutLink() {
     return (
-        <nav>
           <Link
             onClick={this.handleLogoutClick}
             to='/login'>
             Logout
           </Link>
-        </nav>
      )
   }
 
   renderLoginLink() {
       return (
-        <nav>
+        <ul className='login-and-register'>
+          <li>
           <Link to='/login'>Login</Link>
-          {' '}
-          <Link to='/register'>Sign up</Link>
-        </nav>
+          </li>
+          <li>
+          <Link to='/register'>Register</Link>
+          </li>
+        </ul>
       )
   }
 
@@ -52,12 +53,16 @@ class Header extends Component {
             spaced repetition
           </Link>
         </h1>
-        <div className="header__login-options">
-        <span>{this.context.user.name ? this.context.user.name : null}</span>
-            {TokenService.hasAuthToken()
+        <ul className="header__login-options">
+          <li>
+          {this.context.user.name ? this.context.user.name : null}
+          </li>
+          <li>
+          {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
-        </div>
+          </li>
+        </ul>
       </header>
     );
   }

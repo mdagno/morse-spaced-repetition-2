@@ -6,20 +6,19 @@
   margin-top: 3%;
   margin-left: 3%;
   margin-right: 3%;
+
+  h2, h3 {
+    font-size: 1.5em;
+    padding: 3rem;
+    margin: 0;
+    margin: 5px;
+    width: 100%;
+    background-color: #ccc;
+  }
 }
 
 .fas {
   float: right;
-}
-
-.dashboard h2, h3 {
-  font-size: 1em;
-  padding: 1em;
-  margin: 0;
-  border-radius: 5px;
-  margin: 5px;
-  width: 100%;
-  background-color: #eee;
 }
 
 .dashboard ul {
@@ -36,18 +35,27 @@
   text-align: center;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   transform: translateX(30px);
+
+
+  @media only screen and (min-width: 500px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (min-width: 900px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .alphabet li {
   text-align: center;
   margin: 3px;
-  background-color: #777;
+  background-color: rgba(#000, .7);
   color: white;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .progress {
@@ -58,25 +66,31 @@
   margin-left: auto;
   margin-right: auto;
   padding: 5rem;
-  background-color: #777;
+  background-color: rgba(#000, .7);
   color: white;
   width: 99%;
-  text-align: center;
+  text-align: center; 
+    a {
+      text-decoration: none;
+      display: block;
+      color: black;
+      font-weight: 800;
+      background-color: #ccc;
+      padding: 2rem 4rem 2rem 4rem;
+      font-size: 2rem;
+      margin-top: 4rem;
+    }
+
+    a:hover {
+      transform: translateY(-3px) scale(1.05);
+      transition: all .2s;
+      box-shadow: 0 1rem 2rem rgba(#000,.2);
+    }
 }
 
-.progress a {
-  display: block;
-  width: 31%;
-}
 
-.progress a button {
-  width: 100%;
-  margin: 0.5em;
-  height: 50px;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 1em;
-}
+
+
 
 .word-score {
   font-size: 0.6em;
@@ -95,7 +109,7 @@
 
 @keyframes expand {
   0% {
-    transform: translateY(-5rem);
+    transform: translateY(-2rem);
     opacity: 0%;
   }
 
@@ -106,7 +120,7 @@
 }
 
 .expand {
-  animation: expand .25s;
+  animation: expand .4s;
   animation-fill-mode: forwards;
 }
 

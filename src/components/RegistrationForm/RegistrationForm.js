@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Input, Required, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import Button from '../Button/Button'
-import './RegistrationForm.css'
+import './RegistrationForm.scss'
 
 class RegistrationForm extends Component {
   static defaultProps = {
@@ -48,7 +48,7 @@ class RegistrationForm extends Component {
           {error && <p>{error}</p>}
         </div>
         <div>
-        <h2 id='sign-up'>Sign up</h2>
+        <h2 id='sign-up'>Register</h2>
           <Label htmlFor='registration-name-input'>
             Enter your name<Required />
           </Label>

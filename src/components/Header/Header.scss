@@ -4,18 +4,50 @@ header {
   background-color: #eee;
   margin: 0;
   display: grid;
+  height: 10vh;
+}
+
+.login-and-register {
+  font-size: 1.2rem;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+
+  li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  li:hover {
+    transition: all .2s;
+    transform: scale(1.05);
+  }
+  
+}
+
+.header__login-options {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 2rem;
+  list-style: none;
+  font-size: 1.2rem;
 }
 
 h1 {
   text-align: center;
   margin: 0;
-  font-size: 5rem;
+  font-size: 3.5vh;
   font-style: normal;
   background-color: #eee;
   font-family: axia-stencil, sans-serif;
   font-weight: 300;
   font-style: normal;
-  padding: 1.5rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  @media only screen and (min-width: 1000px) {
+    display: block;
+  }
 }
 
 header a {
@@ -33,15 +65,6 @@ header span {
   padding: 1rem;
 }
 
-nav {
-  text-align: right;
-  font-weight: 600;
-  margin-right: 5%;
-}
-
-nav a {
-  margin-left: 1.2em;
-}
 
 
 // @media only screen and (min-device-width : 768px) {

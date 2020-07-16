@@ -39,7 +39,7 @@ export default class App extends Component {
               component={LearningRoute}
             />
             <PublicOnlyRoute
-              path={'/landing'}
+              path={'/home'}
               component={Landing}
             />
             <PublicOnlyRoute

@@ -1,0 +1,136 @@
+.learn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70vh;
+  align-content: center;
+  margin-top: 10vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(black, .4);
+  color: white;
+  text-align: center;
+}
+
+.scoreCounts {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5rem 0 5rem;
+}
+
+.learn p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.current-word {
+  font-size: 5rem !important;
+  margin: 0.25em;
+  padding: 0;
+
+}
+
+.learn form {
+  text-align: center;
+  margin: 1em;
+}
+
+.learn input {
+  width: 15rem;
+  height: 2em;
+  margin: 0.5em;
+  border-radius: 0;
+  border: none;
+  background-color: #ccc;
+  text-align: center;
+  margin: 1rem;
+}
+
+.learn input:focus {
+  border: none;
+  border-radius: 0;
+  outline: 1px solid white;
+}
+
+#submit-button {
+  font-weight: 800;
+  border-radius: 0;
+  border: none;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: #ccc;
+}
+
+#submit-button:hover {
+  transition: all .2s;
+  transform: scale(1.05);
+}
+
+#next-button {
+  font-weight: 800;
+  border-radius: 0;
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem;
+  background-color: #ccc;
+
+  &:hover{
+    transition: all .2s;
+    transform: scale(1.05);
+  }
+}
+
+.learn form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#correct {
+  padding: 1em;
+  background-color: rgba(black, .4);
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
+#incorrect {
+  padding: 1em;
+  margin: 0;
+  background-color: rgba(black, .4);
+  border-bottom: 1px solid black;
+}
+
+
+@keyframes appear {
+  0% {
+    opacity: 0%
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.feedback {
+  animation: appear .2s;
+}
+
+@media only screen and (min-device-width : 768px) {
+  .learn {
+    width: 60%;
+  }
+
+  .learn input {
+    width: 22%;
+  }
+}
+
+@media only screen and (min-device-width : 1024px) {
+  .learn {
+    width: 40%;
+    margin-top: 10vh;
+  }
+}
+

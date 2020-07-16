@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dashboard.css';
+import './Dashboard.scss';
 import UserContext from '../../contexts/UserContext';
 import ApiService from '../../services/api-service';
 import { Link } from 'react-router-dom';
@@ -29,7 +29,7 @@ export default class Dashboard extends React.Component {
           <p>
             {word.original
             .split('')
-            .map(char => char === '.' ?'\u25CF' : '\u268A')
+            .map(char => char === '.' ?'\u25CF' : '\u0082')
             .join('')}
           </p>
           <p className="word-score">Correct Score: {word.correct_count}</p>
@@ -92,7 +92,7 @@ export default class Dashboard extends React.Component {
        <div className='progress expand'>
          <p>Total Score: {this.props.language.total_score}</p>
          <Link to='/learn'>
-         <button>Learn</button>
+         Start learning
          </Link>
        </div>
       )

@@ -1,17 +1,26 @@
 .landing {
     display: grid;
-    grid-template-columns: 5fr 2fr;
-    height: 85vh;
+    grid-template-columns: repeat(6, 1fr);
+    height: 90vh;
 
 
     &__main {
         background-color: white;
         background-image: linear-gradient(rgba(black, .65), rgba(black, .65)), url(../../assets/landing.jpeg);
         background-size: cover;
-        display: grid;
-
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / -1;
+        justify-content: space-evenly;
         align-items: center;
+        text-align: center;
+        height: 50vh;
+
+        h2 {
+            font-family: axia-stencil, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
 
         a,
         a:visited,
@@ -21,12 +30,25 @@
             color: white;
             padding: 10px;
         }
+
+        @media only screen and (min-width: 768px) {
+            height: auto;
+            grid-column: 1 / 5;
+        }
     }
 
     &__secondary {
         background-color: #ccc;
         padding: 2rem;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
+        @media only screen and (min-width: 768px) {
+            grid-column: 5 / 7;
+        }
+        
         h3 {
             margin-top: 1rem;
             margin-bottom: 2rem;
@@ -39,31 +61,17 @@
     }
 
     a {
+        display: block;
         background-color: rgba(#000, .5);
         padding: 2rem;
         transition: all .2s;
         font-size: 2rem;
-
-        @keyframes moveInBottom {
-            0% {
-                opacity: 0;
-                transform: translateY(3rem);
-            }
-        
-            100% {
-                opacity: 1;
-                transform: translate(0);
-            }
-        }
-        animation: moveInBottom .3s ease-out .5s;
-        animation-fill-mode: backwards;
-
     }
+
     a:hover {
-        transform: translateY(-3px);
-        transition: all .5s;
+        transform: translateY(-3px) scale(1.05);
         box-shadow: 0 1rem 2rem rgba(#000,.2);
+        transition: all .1s;
     }
 
-    
 }

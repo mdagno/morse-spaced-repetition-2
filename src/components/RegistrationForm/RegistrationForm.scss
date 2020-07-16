@@ -1,58 +1,71 @@
-.login-form {
-  box-shadow: 0 15px 40px rgba(#000, .15);
+@keyframes appear {
+  0% {
+    opacity: 0%
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.registration-form {
+  animation: appear .5s;
+  margin-top: 5vh;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   width: 80%;
   text-align: center;
-  margin: 2em;
   margin-left: auto;
   margin-right: auto;
-  padding: 1em;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background-color: #eee;
 }
 
 #sign-up {
+  font-size: 2rem;
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2.5rem;
 }
 
-.login-form label {
+.registration-form label {
+  font-size: 1.2rem;
   width: 100%;
   display: inline-block;
 }
 
-.login-form input {
+.registration-form input {
   width: 50%;
   height: 3em;
   margin: 1em;
   display: inline-block;
   border: none;
-  border-radius: none;
-
 }
 
-.login-form button {
+.registration-form button {
   width: 50%;
   height: 3em;
   font-weight: 800;
   margin: 1em;
   margin-left: auto;
   margin-right: auto;
+  display: block;
   border: none;
   border-radius: 0;
   background-color: #ccc;
 }
 
-.login-form button:hover {
-  transition: all .1s;
-  box-shadow: 0 15px 40px rgba(#000, .15);
+.registration-form button:hover {
+  transition: all .2s;
+  box-shadow: 0 1rem 2rem rgba(#000,.2);
   transform: scale(1.05);
 }
 
 
 @media only screen and (min-device-width : 768px) {
-  .login-form {
+  .registration-form {
     width: 30%;
-    height: 400px;
+    height: 500px;
   }
 }
