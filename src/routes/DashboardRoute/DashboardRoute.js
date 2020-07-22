@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './DashboardRoute.css'
 import UserContext from '../../contexts/UserContext'
 import ApiService from '../../services/api-service'
 import Dashboard from '../../components/Dashboard/Dashboard'
